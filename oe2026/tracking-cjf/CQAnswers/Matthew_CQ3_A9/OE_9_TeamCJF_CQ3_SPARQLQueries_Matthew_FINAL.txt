@@ -19,11 +19,12 @@
 #   M0004, M0008, M0018, M0019, M0038, M0060.
 
 PREFIX cjf: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/>
+PREFIX sample: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/CQSample/>
 
 SELECT DISTINCT ?claim
 WHERE {
     ?claim cjf:makesSupports ?relationship .
-    ?relationship cjf:isAimedAtSupports cjf:OCT21_A-M0003 .
+    ?relationship cjf:isAimedAtSupports sample:Move_OCT21_A-M0003 .
 }
 ORDER BY ?claim
 
@@ -35,11 +36,12 @@ ORDER BY ?claim
 # CQ3 use-case illustrations include Issues M0010 and M0014.
 
 PREFIX cjf: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/>
+PREFIX sample: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/CQSample/>
 
 SELECT DISTINCT ?move
 WHERE {
     ?move cjf:makesChallenges ?relationship .
-    ?relationship cjf:isAimedAtChallenges cjf:OCT21_A-M0003 .
+    ?relationship cjf:isAimedAtChallenges sample:Move_OCT21_A-M0003 .
 }
 ORDER BY ?move
 
