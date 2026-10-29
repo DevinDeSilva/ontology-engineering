@@ -1,0 +1,18 @@
+PREFIX cjf: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/>
+PREFIX sample: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/CQSample/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+SELECT DISTINCT ?move ?moveType ?summary
+WHERE {
+
+    # cjf:supports is a inferred property chain
+    ?move cjf:supports sample:Move_OCT21_A-M0003 .
+
+    ?move rdf:type ?moveType .
+    FILTER (?moveType = cjf:Claim)
+    OPTIONAL {
+        ?move cjf:hasSummary ?summary.
+    }
+}
+ORDER BY ?move
