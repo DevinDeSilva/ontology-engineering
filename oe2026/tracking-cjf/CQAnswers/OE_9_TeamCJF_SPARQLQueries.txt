@@ -43,8 +43,8 @@ WHERE {
 }
 ORDER BY ?move ?moveType
 
-
-CQ3 part 1: 
+CQ3: What Claims support or challenge Platform A? Are any of the Claims Supported?
+CQ3 part 1: What Claims support or challenge Platform A?
 
 PREFIX cjf: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/>
 PREFIX sample: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/CQSample/>
@@ -75,7 +75,7 @@ WHERE {
 }
 ORDER BY ?relation ?move
 
-CQ3 part 2 :
+CQ3 part 2: Are any of the Claims Supported?
 
 PREFIX cjf: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/>
 PREFIX sample: <https://tw.rpi.edu/ontology-engineering/oe2026/tracking-cjf/CQSample/>
